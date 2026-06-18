@@ -117,9 +117,9 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
   "risk_score": <number 0-100>,
   "risk_level": "<Low/Medium/High/Critical>",
   "top_personas": [
-    {{"name": "<The Clicker OR Password Recycler OR Shadow IT User OR Over-Trusted Insider>", "risk": "<High/Medium/Low>", "mitre": "<T1566/T1078/T1072/T1134>", "reason": "<one sentence why this persona is high risk for this org type>"}},
-    {{"name": "<different persona>", "risk": "<High/Medium/Low>", "mitre": "<technique>", "reason": "<reason>"}},
-    {{"name": "<different persona>", "risk": "<High/Medium/Low>", "mitre": "<technique>", "reason": "<reason>"}}
+    {{"name": "<The Clicker OR Password Recycler OR Shadow IT User OR Over-Trusted Insider>", "risk": "<High/Medium/Low>", "percentage": <number 1-100>, "mitre": "<T1566/T1078/T1072/T1134>", "reason": "<one sentence why this persona is high risk for this org type>"}},
+    {{"name": "<different persona>", "risk": "<High/Medium/Low>", "percentage": <number 1-100>, "mitre": "<technique>", "reason": "<reason>"}},
+    {{"name": "<different persona>", "risk": "<High/Medium/Low>", "percentage": <number 1-100>, "mitre": "<technique>", "reason": "<reason>"}}
   ],
   "attack_scenarios": [
     "<specific realistic attack scenario 1 for {company_type}>",
@@ -185,7 +185,7 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
                             st.markdown(f"""
                             <div class="persona-card">
                                 <div style="font-size:16px;font-weight:600">{risk_icon} {p['name']}</div>
-                                <div style="color:#94a3b8;font-size:12px;margin:4px 0">{p['risk']} Risk · MITRE {p.get('mitre','')}</div>
+                                <div style="color:#94a3b8;font-size:12px;margin:4px 0">{p['risk']} Risk · {p.get('percentage','')}% of records · MITRE {p.get('mitre','')}</div>
                                 <div style="font-size:13px;margin-top:8px">{p['reason']}</div>
                             </div>
                             """, unsafe_allow_html=True)
