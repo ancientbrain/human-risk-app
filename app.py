@@ -172,7 +172,7 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
                     """, unsafe_allow_html=True)
 
                     risk_css = "risk-critical" if level == "Critical" else "risk-high" if level == "High" else "risk-medium" if level == "Medium" else "risk-low"
-                    st.markdown(f'<div class="{risk_css}">⚠️ <strong>{level} Risk</strong> — This organization type shows elevated human vulnerability based on behavioral pattern analysis of 270 real cybersecurity records.</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="{risk_css}" style="color:#1a1a1a">⚠️ <strong>{level} Risk</strong> — This organization type shows elevated human vulnerability based on behavioral pattern analysis of 270 real cybersecurity records.</div>', unsafe_allow_html=True)
 
                     st.divider()
 
