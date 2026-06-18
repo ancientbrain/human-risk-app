@@ -135,7 +135,7 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
 }}"""
 
                 response = requests.post(
-                    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}",
+                    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}",
                     json={"contents": [{"parts": [{"text": prompt}]}]},
                     timeout=45
                 )
