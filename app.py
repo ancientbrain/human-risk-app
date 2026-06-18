@@ -150,6 +150,7 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
                     data = json.loads(text.strip())
 
                     st.success(f"✅ Report generated for {company_type}!")
+                    st.caption("⚠️ Advisory Report — This report is based on analysis of 270 real cybersecurity records collected in May 2026. It is designed for awareness and tabletop exercises, not as a standalone risk assessment tool.")
 
                     # ── RISK SCORE ────────────────────────────────────────────
                     score = data["risk_score"]
@@ -158,6 +159,7 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
                     col1, col2, col3 = st.columns(3)
                     with col1:
                         st.metric("Human Risk Score", f"{score} / 100")
+                        st.caption("Score based on fear_trigger_score, urgency patterns, and trust manipulation indicators across 270 records.")
                     with col2:
                         st.metric("Risk Level", level)
                     with col3:
