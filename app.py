@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Page config
 st.set_page_config(
-    page_title="Human Risk Report Generator",
+    page_title="Behavrix",
     page_icon="🔐",
     layout="wide"
 )
@@ -26,8 +26,9 @@ st.markdown("""
 
 # ── SIDEBAR ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.image("logo.png", width=60)
-    st.title("Human Risk Report Generator")
+    st.image("logo.png", width=80)
+    st.title("Behavrix")
+    st.caption("Human Risk Report Generator · Powered by 270 real cybersecurity records")
     st.markdown("**Madison Framework · SyntheticPersonas**")
     st.divider()
 
@@ -64,7 +65,7 @@ with st.sidebar:
     st.caption("Satwika Maddukuri · INFO 7375 · NEU")
 
 # ── MAIN CONTENT ─────────────────────────────────────────────────────────────
-st.title("🔐 Human Risk Report Generator")
+st.title("Behavrix — Human Risk Report Generator")
 st.markdown("Generate a human vulnerability risk report for any organization type — powered by 270 real cybersecurity records.")
 st.divider()
 
