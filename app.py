@@ -13,13 +13,13 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
 <style>
-    .risk-critical { background: #fee2e2; border-left: 4px solid #dc2626; padding: 12px; border-radius: 6px; }
-    .risk-high { background: #fef3c7; border-left: 4px solid #d97706; padding: 12px; border-radius: 6px; }
-    .risk-medium { background: #dbeafe; border-left: 4px solid #2563eb; padding: 12px; border-radius: 6px; }
-    .risk-low { background: #d1fae5; border-left: 4px solid #059669; padding: 12px; border-radius: 6px; }
-    .persona-card { background: #1e293b; padding: 12px 16px; border-radius: 8px; margin: 6px 0; }
+    .risk-critical { background: #FAEEDA; border-left: 4px solid #B8433A; padding: 12px; border-radius: 6px; }
+    .risk-high { background: #FAEEDA; border-left: 4px solid #C9702E; padding: 12px; border-radius: 6px; }
+    .risk-medium { background: #dbeafe; border-left: 4px solid #378ADD; padding: 12px; border-radius: 6px; }
+    .risk-low { background: #d1fae5; border-left: 4px solid #1D9E75; padding: 12px; border-radius: 6px; }
+    .persona-card { background: #0D1F35; padding: 12px 16px; border-radius: 8px; margin: 6px 0; }
     .section-header { font-size: 18px; font-weight: 600; margin-top: 20px; margin-bottom: 10px; }
-    .insight-box { background: #0f172a; border: 1px solid #334155; padding: 16px; border-radius: 8px; font-style: italic; }
+    .insight-box { background: #0D1F35; border: 1px solid #378ADD; padding: 16px; border-radius: 8px; font-style: italic; }
     .footer-text { color: #64748b; font-size: 12px; text-align: center; margin-top: 40px; }
 </style>
 """, unsafe_allow_html=True)
@@ -167,9 +167,9 @@ Return ONLY a valid JSON object with NO extra text, NO markdown, NO backticks:
                         st.metric("Organization", company_type)
 
                     # Color coded progress bar
-                    bar_color = "#dc2626" if score >= 75 else "#d97706" if score >= 50 else "#2563eb" if score >= 25 else "#059669"
+                    bar_color = "#B8433A" if score >= 75 else "#C9702E" if score >= 50 else "#378ADD" if score >= 25 else "#1D9E75"
                     st.markdown(f"""
-                    <div style="background:#1e293b;border-radius:8px;padding:4px;margin:8px 0">
+                    <div style="background:#0D1F35;border-radius:8px;padding:4px;margin:8px 0">
                         <div style="background:{bar_color};width:{score}%;height:16px;border-radius:6px;transition:width 0.5s"></div>
                     </div>
                     """, unsafe_allow_html=True)
@@ -278,4 +278,4 @@ else:
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown('<div class="footer-text">Human Risk Report Generator · Madison Framework · SyntheticPersonas · Built with n8n + Gemini 2.0 Flash<br>Data: Kaggle Phishing Dataset · Global Cognitive Threat Dataset · CISA RSS Feed · Satwika Maddukuri · INFO 7375 · NEU</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer-text">Behavrix · Human Risk Report Generator · Madison Framework · SyntheticPersonas · Built with n8n + Gemini 2.0 Flash<br>Data: Kaggle Phishing Dataset · Global Cognitive Threat Dataset · CISA RSS Feed · Satwika Maddukuri · INFO 7375 · NEU</div>', unsafe_allow_html=True)
