@@ -26,7 +26,7 @@ st.markdown("""
 
 # ── SIDEBAR ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.image("https://img.icons8.com/fluency/96/shield.png", width=60)
+    st.image("logo.png", width=60)
     st.title("Human Risk Report Generator")
     st.markdown("**Madison Framework · SyntheticPersonas**")
     st.divider()
