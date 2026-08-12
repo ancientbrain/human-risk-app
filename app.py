@@ -15,8 +15,8 @@ st.markdown("""
 <style>
     .risk-critical { background: #FAEEDA; border-left: 4px solid #B8433A; padding: 12px; border-radius: 6px; }
     .risk-high { background: #FAEEDA; border-left: 4px solid #C9702E; padding: 12px; border-radius: 6px; }
-    .risk-medium { background: #dbeafe; border-left: 4px solid #378ADD; padding: 12px; border-radius: 6px; }
-    .risk-low { background: #d1fae5; border-left: 4px solid #1D9E75; padding: 12px; border-radius: 6px; }
+    .risk-medium { background: #EAF4FB; border-left: 4px solid #378ADD; padding: 12px; border-radius: 6px; }
+    .risk-low { background: #E1F5EE; border-left: 4px solid #1D9E75; padding: 12px; border-radius: 6px; }
     .persona-card { background: #0D1F35; padding: 12px 16px; border-radius: 8px; margin: 6px 0; }
     .section-header { font-size: 18px; font-weight: 600; margin-top: 20px; margin-bottom: 10px; }
     .insight-box { background: #0D1F35; border: 1px solid #378ADD; padding: 16px; border-radius: 8px; font-style: italic; }
